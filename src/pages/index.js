@@ -72,13 +72,34 @@ const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=de
 const IndexPage = () => (
   <Layout>
     <Seo title="Home" />
-    <div className={styles.textCenter}>
+    <div
+      style={{
+        display: "flex",
+        backgroundColor: "#EEEEEE",
+        padding: 50,
+        width: "auto",
+      }}
+    >
+      <div>
+        <h1>Have some fun and keep learning!</h1>
+
+        <p>Inspired from the popular Wordle game focus on words for tech</p>
+      </div>
+      <div>
+        <StaticImage
+          src="../images/devle-red-iphone-.png"
+          alt="Devle app"
+          loading="eager"
+          width={400}
+          quality={100}
+          formats={["auto", "webp", "avif"]}
+        />
+      </div>
+    </div>
+    {/* <div className={styles.textCenter}>
       <StaticImage
         src="../images/example.png"
-        loading="eager"
-        width={64}
-        quality={95}
-        formats={["auto", "webp", "avif"]}
+        
         alt=""
         style={{ marginBottom: `var(--space-3)` }}
       />
@@ -96,8 +117,8 @@ const IndexPage = () => (
         <br />
         Edit <code>src/pages/index.js</code> to update this page.
       </p>
-    </div>
-    <ul className={styles.list}>
+    </div> */}
+    {/* <ul className={styles.list}>
       {links.map(link => (
         <li key={link.url} className={styles.listItem}>
           <a
@@ -115,7 +136,7 @@ const IndexPage = () => (
         <a href={`${link.url}${utmParameters}`}>{link.text}</a>
         {i !== moreLinks.length - 1 && <> · </>}
       </React.Fragment>
-    ))}
+    ))} */}
   </Layout>
 )
 
